@@ -54,3 +54,22 @@
 - Checked for duplicate rows.
 - Found no exact duplicate rows in the complete merged dataset.
 - Kept repeated-looking records because they differed in other product details.
+
+## 10. Sorting and Filtering Data
+
+- Sorted `Orders Data` by `Order Date` in descending order to analyze recent orders.
+- Filtered the `Location` column to `Chennai Tamil Nadu` for regional analysis.
+
+## 11. Grouping and Aggregating Data
+
+- Duplicated `Order Details` and calculated **Average Profit by Category** using Group By.
+- Duplicated `Sales target` and calculated **Total Target by Month** using Sum.
+- Created summary tables named `Order Details Summary` and `Sales Target Summary`.
+
+## Data Modeling
+
+- Created an active **one-to-many (1:*)** relationship between `List of Orders[Order ID]` and `Order Details[Order ID]`.
+- Created an active **many-to-many (*:*)** relationship between `Order Details[Category]` and `Sales target[Category]`.
+
+
+
