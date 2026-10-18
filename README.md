@@ -1,38 +1,38 @@
 # Power BI Assignment 1 – E-Commerce Sales Analysis
 
-## Data Transformation
+## 1. Data Transformation
 
-### 1. Keep First 500 Rows
+### 1.1 Keep First 500 Rows
 **Description:** Restricted the List of Orders table to the first 500 rows.
 
 **Explanation:** Used Home → Keep Rows → Keep Top Rows and entered 500.
 
-### 2. Change Order Date Data Type
+### 1.2 Change Order Date Data Type
 **Description:** Changed Order Date to Date data type.
 
 **Explanation:** Selected Order Date and used Transform → Data Type → Date.
 
-### 3. Change Amount and Target Data Types
+### 1.3 Change Amount and Target Data Types
 **Description:** Changed Amount and Target to Fixed Decimal Number.
 
 **Explanation:** Selected each column and changed its data type to Fixed Decimal Number.
 
-### 4. Format CustomerName
+### 1.4 Format CustomerName
 **Description:** Converted customer names into Proper Case.
 
 **Explanation:** Used Transform → Format → Capitalize Each Word. For example, `rahul kumar` becomes `Rahul Kumar`.
 
-### 5. Create Location Column
+### 1.5 Create Location Column
 **Description:** Merged City and State into a new column named Location.
 
 **Explanation:** Used Merge Columns with a comma and space separator to create the format `City, State`.
 
-### 6. Create Profit Margin
+### 1.6 Create Profit Margin
 **Description:** Created a custom column named Profit Margin.
 
 **Explanation:** Used the formula `[Profit] / [Amount]` and changed the column data type to Percentage.
 
-### 7. Create Profit Status
+### 1.7 Create Profit Status
 **Description:** Created a conditional column named Profit Status based on Profit values.
 
 **Explanation:**
@@ -40,14 +40,14 @@
 - Profit = 0 → Break-Even
 - Profit > 0 → Profit
 
-## 8. Merging Data (Joins)
+## 2. Merging Data (Joins)
 
 - Merged `List of Orders` and `Order Details` using `Order ID`.
 - Used **Left Outer Join** in Power Query.
-- Expanded the required columns and removed duplicate `Order ID`.
+- Expanded the required columns and excluded the duplicate `Order ID` from the expanded columns.
 - Renamed the new table to `Orders Data`.
 
-## 9. Handling Missing Data & Duplicates
+## 3. Handling Missing Data & Duplicates
 
 - Checked missing values using Column Quality.
 - Found no missing values or errors in the merged columns.
@@ -55,21 +55,18 @@
 - Found no exact duplicate rows in the complete merged dataset.
 - Kept repeated-looking records because they differed in other product details.
 
-## 10. Sorting and Filtering Data
+## 4. Sorting and Filtering Data
 
 - Sorted `Orders Data` by `Order Date` in descending order to analyze recent orders.
 - Filtered the `Location` column to `Chennai Tamil Nadu` for regional analysis.
 
-## 11. Grouping and Aggregating Data
+## 5. Grouping and Aggregating Data
 
 - Duplicated `Order Details` and calculated **Average Profit by Category** using Group By.
 - Duplicated `Sales target` and calculated **Total Target by Month** using Sum.
 - Created summary tables named `Order Details Summary` and `Sales Target Summary`.
 
-## Data Modeling
+## 6. Data Modeling
 
 - Created an active **one-to-many (1:*)** relationship between `List of Orders[Order ID]` and `Order Details[Order ID]`.
 - Created an active **many-to-many (*:*)** relationship between `Order Details[Category]` and `Sales target[Category]`.
-
-
-
