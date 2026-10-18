@@ -46,3 +46,11 @@
 - Used **Left Outer Join** in Power Query.
 - Expanded the required columns and removed duplicate `Order ID`.
 - Renamed the new table to `Orders Data`.
+
+## 9. Handling Missing Data & Duplicates
+
+- Checked missing values using Column Quality.
+- Found no missing values or errors in the merged columns.
+- Checked for duplicate rows.
+- Found no exact duplicate rows in the complete merged dataset.
+- Kept repeated-looking records because they differed in other product details.
