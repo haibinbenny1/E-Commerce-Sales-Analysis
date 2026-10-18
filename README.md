@@ -39,3 +39,10 @@
 - Profit < 0 → Loss
 - Profit = 0 → Break-Even
 - Profit > 0 → Profit
+
+## 8. Merging Data (Joins)
+
+- Merged `List of Orders` and `Order Details` using `Order ID`.
+- Used **Left Outer Join** in Power Query.
+- Expanded the required columns and removed duplicate `Order ID`.
+- Renamed the new table to `Orders Data`.
